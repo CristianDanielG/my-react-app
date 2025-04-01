@@ -11,21 +11,14 @@ export default function App() {
       <div>
       </div>
       <h1>Tic Tac Toe Time</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Square />
     </>
   )
 }
 
 export function Square() {
-  return <button className="square">X</button>;
+  return(
+    <>
+  <button className="square">X</button>
+  </>)
 }
