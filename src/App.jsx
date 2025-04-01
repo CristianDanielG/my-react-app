@@ -37,7 +37,7 @@ export function Board() {
   </>)
 }
 
-export function Square({ value }) {
+export function Square() {
   const [value, setValue]=useState(null);
 
   function handleClick(){
@@ -50,7 +50,6 @@ export function Square({ value }) {
       className='square'
       onClick={handleClick}
     >
-      {value}
     </button>
   );
 }
