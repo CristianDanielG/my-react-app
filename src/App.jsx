@@ -50,6 +50,7 @@ export function Square() {
       className='square'
       onClick={handleClick}
     >
+      {value}
     </button>
   );
 }
