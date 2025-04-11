@@ -15,8 +15,20 @@ export default function App() {
     </>
   )
 }
+export default function Game() {
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board />
+      </div>
+      <div className="game-info">
+        <ol>{/*TODO*/}</ol>
+      </div>
+    </div>
+  );
+}
 
-export function Board() {
+function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] =useState(Array(9).fill(null));
   
@@ -33,6 +45,7 @@ export function Board() {
     }
     setSquares(nextSquares)
     setXIsNext(!xIsNext);
+    console.log(squares);
 }
   const winner = calculateWinner(squares);
   let status;
