@@ -37,7 +37,7 @@ export default function Game() {
 }
 
 function Board({ xIsNext, squares, onPlay }) {
-  function handleClick(i){
+  function handleClick(i) {
     if (squares[i] || calculateWinner(squares)){
       return;
     } 
@@ -81,7 +81,7 @@ function Square({ value, onSquareClick}) {
   return (
     <button className='square' onClick={onSquareClick}>
       {value}
-      </button>
+    </button>
   );
 }
 
