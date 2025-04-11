@@ -3,19 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-export default function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-      </div>
-      <h1>Tic Tac Toe Time</h1>
-      <Game />
-    </>
-  )
-}
-export function Game() {
+export default function Game() {
   const [xIsNext, setXIsNext] = useState(true);
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
