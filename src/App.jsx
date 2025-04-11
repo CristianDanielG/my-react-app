@@ -35,11 +35,7 @@ export default function Game() {
   );
 }
 
-function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] =useState(Array(9).fill(null));
-  
-  
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i){
     if (squares[i] || calculateWinner(squares)){
       return;
@@ -50,9 +46,7 @@ function Board() {
     } else {
       nextSquares[i] = "0"
     }
-    setSquares(nextSquares)
-    setXIsNext(!xIsNext);
-    console.log(squares);
+    onPlay(nextSquares);
 }
   const winner = calculateWinner(squares);
   let status;
